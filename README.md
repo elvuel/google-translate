@@ -1,9 +1,12 @@
 # google-translate
-[![Actions Status](https://github.com/elvuel/google-translate/actions/workflows/test.yaml/badge.svg)](https://github.com/elvuel/google-translate/actions)
 
 A **free** and **unlimited** API for Google Translate
 
 Parts of the code are ported from [gtranslate](https://github.com/bregydoc/gtranslate) and [google-translate-api](https://github.com/matheuss/google-translate-api) (also MIT license).
+
+## Notice
+
+This fork is for testing purpose, tracking the [original repo](https://github.com/gilang-as/google-translate) for updates.
 
 ## Features
 - Auto language detection
@@ -30,15 +33,10 @@ import (
 )
 
 func main()  {
-	value := gtranslate.Translate{
-		Text: "Halo Dunia",
-		//From: "id",
-		To: "en",
-	}
-	translated, err := gtranslate.Translator(value)
+	translated, err := gtranslate.ManualTranslate("Welcome back", "en-US", "zh-CN")
 	if err != nil {
 		panic(err)
-	}else{
+	} else {
 		prettyJSON, err := json.MarshalIndent(translated, "", "\t")
 		if err != nil {
 			panic(err)
@@ -62,4 +60,4 @@ func main()  {
 
 ## License
 
-MIT © [Gilang Adi S](https://github.com/elvuel)
+MIT © [Gilang Adi S](https://github.com/gilang-as)
