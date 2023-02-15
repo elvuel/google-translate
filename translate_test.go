@@ -1,7 +1,7 @@
 package google_translate
 
 import (
-	"github.com/gilang-as/google-translate/params"
+	"github.com/elvuel/google-translate/params"
 	"testing"
 )
 

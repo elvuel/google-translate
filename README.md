@@ -1,5 +1,5 @@
 # google-translate
-[![Actions Status](https://github.com/gilang-as/google-translate/actions/workflows/test.yaml/badge.svg)](https://github.com/gilang-as/google-translate/actions)
+[![Actions Status](https://github.com/elvuel/google-translate/actions/workflows/test.yaml/badge.svg)](https://github.com/elvuel/google-translate/actions)
 
 A **free** and **unlimited** API for Google Translate
 
@@ -14,7 +14,7 @@ Parts of the code are ported from [gtranslate](https://github.com/bregydoc/gtran
 ## Install
 
 ```
-go get github.com/gilang-as/google-translate
+go get github.com/elvuel/google-translate
 ```
 
 ## API
@@ -26,7 +26,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	gtranslate "github.com/gilang-as/google-translate"
+	gtranslate "github.com/elvuel/google-translate"
 )
 
 func main()  {
@@ -62,4 +62,4 @@ func main()  {
 
 ## License
 
-MIT © [Gilang Adi S](https://github.com/gilang-as)
+MIT © [Gilang Adi S](https://github.com/elvuel)

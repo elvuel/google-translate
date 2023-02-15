@@ -223,7 +223,16 @@ func translateV1(text string, from string, to string) (*Translated, error) {
 		txt := resp2[0].([]interface{})[0].(string)
 		AutoCorrectedValue = &txt
 	}
-	textTo := resp2[1].([]interface{})[0].([]interface{})[0].([]interface{})[5].([]interface{})[0].([]interface{})[0].(string)
+	// textTo := resp2[1].([]interface{})[0].([]interface{})[0].([]interface{})[5].([]interface{})[0].([]interface{})[0].(string)
+	var textTo string
+	textTo = resp2[1].([]interface{})[0].([]interface{})[0].([]interface{})[5].([]interface{})[0].([]interface{})[0].(string)
+	optionals, ok := resp2[1].([]interface{})[0].([]interface{})[0].([]interface{})[5].([]interface{})
+	if ok {
+		textTo = ""
+		for _, item := range optionals {
+			textTo += item.([]interface{})[0].(string)
+		}
+	}
 	pronunciationfrom := resp2[1].([]interface{})[0].([]interface{})[0].([]interface{})[1]
 	textIso := resp2[1].([]interface{})[3].(string)
 	var pronunciation *string
